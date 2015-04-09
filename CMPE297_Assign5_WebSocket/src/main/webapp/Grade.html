@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> Grade Page </title>
+    <script src="websocketdriver.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <style>
+        .align{
+            width: 100%;
+            text-align: center;
+        }
+        myHead {
+            display: block;
+            background-color: #ddd;
+            padding: 25px;
+            font-size: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+<h1 style="text-align:center"><myHead><strong> Web Socket Driver </strong></myHead></h1>
+
+    <div class="align">
+        <label for="quiz1"> Quiz 1 Score: </label>
+        <input type="range" min="0" max="100" step="1" value="0" id="quiz1" name="quiz1" onchange="showValue(this.value,'quiz1')" /> 
+        <span id="range1">0</span> <br/>
+
+        <label for="quiz2"> Quiz 2 Score: </label>
+        <input type="range" min="0" max="100" step="1" value="0" id="quiz2" name="quiz2" onchange="showValue(this.value,'quiz2')" /> 
+        <span id="range2">0</span> <br />
+
+        <label for="midterm"> Midterm Score: </label>
+        <input type="range" min="0" max="100" step="1" value="0" id="midterm" name="midterm" onchange="showValue(this.value,'midterm')" /> 
+        <span id="range3">0</span> <br />
+
+        <span id="grade"></span> <br />
+        
+        <input type="button" value="Grade Me" name="Grade Me" style="float:middle" onclick="gradeMe()" /> 
+        <input type="reset" value="Cancel" name="Cancel" style="float:middle" />
+	
+    </div>
+    
+</body>
+</html>
