@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Question 4 </title>
+	<script src="script.js"></script>
+    <style>
+    myHead {
+    display: block;
+    background-color: #ddd;
+    padding: 25px;
+    font-size: 30px;
+  	}
+    .alignn2 {
+    	float: right;
+    	text-align: center;
+    }
+	</style>
+</head>
+
+<body>
+	<form style="width:75em;margin:0 auto">
+		<header style="text-align:center"><myHead><strong> Question 4 </myHead></strong></header>
+    	<h3 style="font-size: 20px"> Watch the video and answer the following question.</h3>
+    	<h3 style="font-size: 20px"> What is the source as mentioned in the video?</h3>
+		<div class="alignn2">
+		<video name="video" width="400px" controls>
+		<source src="Investigating the Martian Atmosphere.m4v" type="video/mp4">			
+		Your browser does not support HTML5 video.
+		</video><br /> 
+		<p>Video courtesy of NASA <br />
+		<a href="http://svs.gsfc.nasa.gov/vis/a010000/a011600/a011603/" target="_blank"> Investigating the Martian Atmosphere </a> </p>
+		</div>	
+		<p> <ol>	
+		<input type="radio" name="ques" value="opt1"> NASA.gov <br />
+		<input type="radio" name="ques" value="opt1"> Data.gov <br />
+		<input type="radio" name="ques" value="opt1"> Facebook <br />
+		<input type="radio" name="ques" value="opt1"> XYZ.net <br />
+		</ol> </p> <br />
+		<input type="button" onclick="submit(5,'audio-video')" value="Submit & Next Question" name="next"> 
+        <input type="button" onclick="window.location.href='ques4.html';" value="Cancel & Clear Selection" name="next"><br />
+    </form>	
+</body>
+</html>

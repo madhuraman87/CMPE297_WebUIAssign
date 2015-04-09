@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Scrolling Nav - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        // Load the Visualization API and the piechart package.
+        google.load('visualization', '1.1', {'packages': ['corechart']});
+    </script>
+</head>
+
+<!-- The #page-top ID is part of the scrolling feature - the data-spy and data-target are part of the built-in Bootstrap scrollspy function -->
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="index.html" id="pizza">Build Pizza</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#pizza_section">Build Pizza</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#dashboard" id="dashboard">Dashboard</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Pizza Section -->
+    <section id="pizza_section" class="pizza-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Domino's Pizza</h1>
+                    <p><strong>Usage Instructions:</strong> Click on the toppings needed and click on the button to build your pizza.</p>
+                    <!--<a class="btn btn-default page-scroll" href="#dashboard">Click Me to Scroll Down!</a> -->
+
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <legend>Vegetarian Toppings</legend>
+                            <label> <input type="checkbox" value="Black_Olives" class="vegToppings">Black Olives </label> <br />
+                            <label> <input type="checkbox" value="Jalapenos" class="vegToppings">Jalapenos </label> <br />
+                            <label> <input type="checkbox" value="Mushroom" class="vegToppings">Mushroom </label> <br />
+                            <label> <input type="checkbox" value="Onion" class="vegToppings">Onion </label> <br />
+                            <label> <input type="checkbox" value="Tomatoes" class="vegToppings">Tomatoes </label> <br />
+                            <label> <input type="checkbox" value="Spinach" class="vegToppings">Spinach </label> <br />
+                            <label> <input type="checkbox" value="Feta" class="vegToppings">Feta </label> <br />
+                            <label> <input type="checkbox" value="Garlic" class="vegToppings">Garlic </label> <br />
+                            <label> <input type="checkbox" value="Green Peppers" class="vegToppings">Green Peppers </label> <br />
+                            <label> <input type="checkbox" value="Cheddar" class="vegToppings">Cheddar </label> <br />
+                        </fieldset>
+                    </div>
+                    <div class="col-lg-6">
+                        <fieldset>
+                            <legend>Non - Vegetarian Toppings</legend>
+                            <label> <input type="checkbox" value="Pepperoni" class="nvegToppings">Pepperoni </label> <br />
+                            <label> <input type="checkbox" value="Sausage" class="nvegToppings">Sausage </label> <br />
+                            <label> <input type="checkbox" value="Beef" class="nvegToppings">Beef </label> <br />
+                            <label> <input type="checkbox" value="Steak" class="nvegToppings">Steak </label> <br />
+                            <label> <input type="checkbox" value="Ham" class="nvegToppings">Ham </label> <br />
+                            <label> <input type="checkbox" value="Bacon" class="nvegToppings">Bacon </label> <br />
+                            <label> <input type="checkbox" value="Salami" class="nvegToppings">Salami </label> <br />
+                            <label> <input type="checkbox" value="Chicken" class="nvegToppings">Chicken </label> <br />
+                            <label> <input type="checkbox" value="Parmesan" class="nvegToppings">Parmesan </label> <br />
+                            <label> <input type="checkbox" value="Provolone" class="nvegToppings">Provolone </label> <br />
+                        </fieldset>
+                    </div>
+                <input type="button" id="generate_chart" value="Build Pizza">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1>Dashboard</h1>
+                    <div class="col-lg-4">
+                        <div id="piechart1" style="width: 900px; height: 500px;"></div>
+                    </div>
+                    <div class="col-lg-4 col-lg-offset-1">
+                        <div id="piechart2" style="width: 900px; height: 500px;"></div>
+                    </div>
+                    <!--<div class="col-lg-4 col-lg-offset-1">-->
+                        <!--<div id="piechart3" style="width: 900px; height: 500px;"></div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Scrolling Nav JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+
+    <!-- Google Chart -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

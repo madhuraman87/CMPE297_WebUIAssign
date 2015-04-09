@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Survey </title> 
+    <script src="script.js"></script> 
+    <style>
+    myHead {
+    display: block;
+    background-color: #ddd;
+    padding: 25px;
+    font-size: 30px;
+  	} 
+    .alignn3 {
+        float: left;
+		text-align: right;
+		margin-right: 0.5em;
+		display: block
+	}  
+    </style>
+</head>
+
+<body>    
+    <form style ="width:75em;margin:0 auto" action="score.html" method="get">
+    	<header style="text-align:center"> <myHead><strong> Survey </strong></myHead> </header>
+    	<h3 style="font-size: 20px"> How did you like the center? </h3> <br />
+    	<label for="comments" style="display:inline-block;"> Comments : </label> 
+	    <textarea name="comments" rows="5" cols="50" placeholder="Enter your comments here.." autofocus required></textarea> 
+	    <br /> <br /> 
+    	<label for="area"> Select Test Area Location : </label> <br /><br />
+		<div class="alignn3">
+			<label for="city"> City : </label> 
+	    	<input list="city" name="city" placeholder="Enter City.." required>
+			<datalist id="city" >
+			  <option value="San Jose">
+			  <option value="Santa Clara">
+			  <option value="Mountain View">
+			  <option value="Fremont">
+			  <option value="Palo Alto">
+			  <option value="San Francisco">
+			  <option value="Sacramento">
+			  <option value="San Ramon">
+			  <option value="Berkeley">
+			</datalist> 
+			<br /> <br />
+			<label for="room#"> Room No : </label> 
+	    	<input list="room#" name="room#" placeholder="Enter as Room# XYZ" required>
+			<datalist id="room#">
+			  <option value="Room# 337">
+			  <option value="Room# 331">
+			  <option value="Room# 335">
+			  <option value="Room# 220">
+			  <option value="Room# 189">
+			  <option value="Room# 283">
+			  <option value="Room# 498">
+			  <option value="Room# 226">
+			  <option value="Room# 190">
+			</datalist>
+			<br /> <br />
+			<input type="submit" value="Submit & Get Score" name="submit"> 
+	        <input type="button" onclick="window.location.href='score.html';" value="Skip & Get Score" name="next"><br />
+	    </div> 
+	</form>
+</body>
+</html>	

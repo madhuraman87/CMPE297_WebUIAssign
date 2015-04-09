@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Question 3 </title>
+    <script src="script.js"></script>
+    <style>
+    myHead {
+    display: block;
+    background-color: #ddd;
+    padding: 25px;
+    font-size: 30px;
+  	}
+    img  {
+    float: right;
+	}
+	</style>	
+</head>
+
+<body>    
+    <form style ="width:75em;margin:0 auto">
+    	<header style="text-align:center"><myHead><strong> Question 3 </myHead></strong></header>
+    	<h3 style="font-size: 20px"> As per the latest twitter news, complete the article snippet given by selecting appropriate choices for the blanks. </h3> <br />
+		<p style="color:ash;font-style: italic"> "Twitter wants more cash. The company announced two <mark id="myLbl">_____</mark> million debt offerings in a filing today, each with a potential $100 increase provided that the sales are oversubscribed. Assuming full tip, including the $100 million boosters, <mark id="myLbl1">_____</mark> will raise up to $1.5 billion with the two offerings". <br />
+		<a href="http://techcrunch.com/2014/09/10/twitter-to-raise-up-to-1-5b-in-debt-offering/"> Source : http://techcrunch.com/2014/09/10/twitter-to-raise-up-to-1-5b-in-debt-offering/ </a>
+		</p>
+		<p>
+		<ol>
+		<input type="radio" name="ques" value="$650" id="ques3" data-correct="true"> $650 <br />
+		<input type="radio" name="ques" value="$550" id="ques3"> $550	<br />
+		<input type="radio" name="ques" value="$450" id="ques3"> $450	<br />
+		</ol>
+		<ol>
+		<input type="radio" name="ques3a" value="Twitter" id="ques3a" data-correct="true"> Twitter <br />
+		<input type="radio" name="ques3a" value="Google" id="ques3a"> Google	<br />
+		<input type="radio" name="ques3a" value="Facebook" id="ques3a"> Facebook <br />
+		</ol>
+		<br />
+        <input type="button" onclick="submit(4,'comprehensive')" value="Submit & Next Question" name="next"> 
+        <input type="button" onclick="window.location.href='ques3.html';" value="Cancel & Clear Selection" name="next"> <br />
+    	</p>
+    </form>
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$('input:radio[name=ques3]').click(function() {
+	var ans1 = $('input:radio[name=ques3]:checked').val();
+	$('#myLbl').html(ans1);  
+	});
+	$('input:radio[name=ques3a]').click(function() {
+	var ans2 = $('input:radio[name=ques3a]:checked').val();
+	$('#myLbl1').html(ans2);
+	});
+</script>
+</html>	

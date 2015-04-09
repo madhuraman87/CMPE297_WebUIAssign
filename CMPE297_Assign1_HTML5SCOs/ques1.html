@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Question 1 </title>
+    <script src="script.js"></script>
+    <style>
+    myHead {
+    display: block;
+    background-color: #ddd;
+    padding: 25px;
+    font-size: 30px;
+  	}
+    img {
+    float: right;
+	}
+	</style>	
+</head>
+
+<body>    
+    <form style ="width:75em;margin:0 auto">
+    	<header style="text-align:center"><myHead><strong> Question 1 </myHead></strong></header>    	
+    	<h3 style="font-size: 20px"> Given points (x1,y1) and (x2,y2) select the formula to find the equation of given line.</h3> <br /> 
+		<img src="graph.jpeg" alt="find equation of the line" /> <br />
+		<p>
+		<ol>
+		<input type="radio" name="ques" id="opt1" value="opt1">
+		<math xmlns="http://www.w3.org/1998/Math/MathML">
+			<mrow>
+				<mrow> <mi>y</mi> <mo>=</mo> </mrow>
+				<mrow> <mi>m</mi><mo></mo><mi>x</mi><mo>+</mo><mi>b</mi> </mrow>
+			</mrow>
+		</math> <br />
+		<input type="radio" name="ques" id="opt2" value="opt2">
+		<math xmlns="http://www.w3.org/1998/Math/MathML">
+			<mrow>
+				<msup>
+						<mrow><mo>(</mo><mi>x</mi><mo>-</mo><mi>h</mi><mo>)</mo></mrow>
+						<mrow><mn>2</mn></mrow>					
+				</msup>	
+				<mrow><mo>+</mo></mrow>
+				<msup>
+						<mrow><mo>(</mo><mi>y</mi><mo>-</mo><mi>k</mi><mo>)</mo></mrow>
+						<mrow><mn>2</mn></mrow>					
+				</msup>
+				<mrow><mo>=</mo></mrow>	
+				<msup><mi>r</mi><mn>2</mn></msup>
+			</mrow>
+		</math> <br />
+		<input type="radio" name="ques" id="opt3" value="opt3">
+		<math xmlns="http://www.w3.org/1998/Math/MathML">
+			<mrow>
+				<mrow><mi>y</mi><mo>-</mo><msub><mi>y</mi><mn>1</mn></msub></mrow>
+				<mrow><mo>=</mo></mrow>
+				<mrow><mi>m</mi><mo></mo><mo>(</mo><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>1</mn></msub><mo>)</mo></mrow>
+			</mrow>
+		</math> <br />
+		<input type="radio" name="ques" id="opt4" value="opt4" data-correct="true">
+		<math xmlns="http://www.w3.org/1998/Math/MathML">
+			<mrow>
+				<mrow><mi>y</mi><mo>-</mo><msub><mi>y</mi><mn>2</mn></msub></mrow>
+				<mrow><mo>=</mo></mrow>
+				<mrow><mfrac>
+					<mrow><msub><mi>y</mi><mn>2</mn></msub><mo>-</mo><msub><mi>y</mi><mn>1</mn></msub></mrow> 
+					<mrow><msub><mi>x</mi><mn>2</mn></msub><mo>-</mo><msub><mi>x</mi><mn>1</mn></msub></mrow>
+				</mfrac></mrow>
+				<mrow><mo>(</mo><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>2</mn></msub><mo>)</mo></mrow>
+			</mrow>
+		</math> <br />
+		</ol>
+		</p> <br />
+     </form>
+     <button type="button" class="btn btn-primary" onclick="submit(2,'quants')">Submit & Next Question</button> 
+     <button type="button" class="btn btn-primary">Cancel & Clear Selection</button> <br />
+</body>
+</html>

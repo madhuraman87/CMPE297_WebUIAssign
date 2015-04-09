@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Score Card </title>
+    <script src="script.js"></script>  
+    <style>
+    myHead {
+    display: block;
+    background-color: #ddd;
+    padding: 25px;
+    font-size: 30px;
+  	} 
+
+    div {
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-width: 2px;
+    }
+    </style>
+</head>
+<body onload="score()">    
+    <form style ="width:75em;margin:0 auto" action="" method="get">
+        <header style="text-align:center"><myHead><strong> Score Card </strong></myHead> </header>
+        <br /> <br />
+        <div>
+            <details>
+            <summary> Quantitative Section </summary>
+            <p> Number of Questions Answered: <label id="QS1"> </label> </p>
+            <p> Number of Correct Answers: <label id="QS2"> </label> </p>
+            <p> Score: <label id="QS3"> </label> </p>
+            </details>
+            
+            <details>
+            <summary> Reading Section </summary>
+            <p> Number of Questions Answered: <label id="RS1"> </label> </p>
+            <p> Number of Correct Answers: <label id="RS2"> </label> </p>
+            <p> Score: <label id="RS3"> </label> </p>
+            </details>
+            
+            <details>
+            <summary> Audio/Video Section </summary>
+            <p> Number of Questions Answered: <label id="AVS1"> </label> </p>
+            <p> Number of Correct Answers: <label id="AVS2"> </label> </p>
+            <p> Score: <label id="AVS3"> </label> </p>
+            </details>
+            <br />
+        </div>
+        <h2 style="font-size:20px;text-align:center"> Thank You!!! </h2> <br />
+        <div1 style="width:100%;height:100%;position:relative;vertical-align:middle;text-align:center;">
+        <input type="submit" style="margin-left:auto;margin-right:auto;display:block" value="Finish" name="submit"></div1>
+    </form>
+</body>
+</html>

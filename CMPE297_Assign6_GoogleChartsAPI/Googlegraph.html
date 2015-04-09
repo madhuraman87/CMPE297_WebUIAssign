@@ -1,0 +1,25 @@
+<html>
+<head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="scrolling-nav/js/script.js"> </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+    <script src="http://code.jquery.com/ui/1.9.1/jquery-ui.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+<form>
+    <p>
+        <input type="checkbox" class="chk" value="Hourly"> Hourly
+        <input type="checkbox" class="chk" value="Daily"> Daily
+        <input type="checkbox" class="chk" value="Weekly"> Weekly
+        <input type="checkbox" class="chk" value="Monthly"> Monthly
+        <input type="checkbox" class="chk" value="Yearly"> Yearly
+    </p>
+    <input type="button" value="draw" onclick="drawChart()">
+</form>
+
+<!--Div that will hold the pie chart-->
+<div id="chart_div"></div>
+</body>
+</html>

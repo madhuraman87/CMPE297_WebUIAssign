@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> User Login </title>
+    <style>
+    myHead {
+    display: block;
+    background-color: #ddd;
+    padding: 25px;
+    font-size: 30px;
+    } 
+    .alignn {
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+        text-align: right;
+    }
+    </style>
+</head>
+
+<body>    
+    <form style ="width:75em;margin:0 auto;" action="welcome.html" method="get">
+		<h1 style="text-align:center"><myHead><strong> LOGIN FORM </strong></myHead> </h2>
+        <div class="alignn">
+            <label for="loginName"> Login Name </label> 
+            <input type="text" id="loginName" name="loginName" placeholder="LastName,FirstName" /> <br />
+            <label for="username"> Username </label> 
+            <input type="email" name="username" placeholder="yourname@email.com" required autofocus /> <br />
+            <label for="pwd"> Password </label>
+            <input type="password" name="pwd" placeholder="password" required /> <br />
+            <a href=""> Create Account/Forgot? </a> 
+            <input type="submit" value="Login" name="submit" /> <br /> 
+        </div>        
+    </form>
+</body>
+</html>

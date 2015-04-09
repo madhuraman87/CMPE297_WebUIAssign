@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> Registration Form </title>
+    <script src="mylibrary.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <style>
+        .align{
+            width: 30%;
+            text-align: right;
+        }
+        myHead {
+            display: block;
+            background-color: #ddd;
+            padding: 25px;
+            font-size: 30px;
+        }
+        progress {
+            background-color: green;
+        }
+    </style>
+</head>
+<body onload="Pageloaded()">
+<form  name="myForm" style ="width:75em;margin:0 auto;text-align:center">
+    <h1 style="text-align:center"><myHead><strong> Registration Form </strong></myHead></h1>
+    <div class="align">
+        <label for="FirstName"> First Name </label>
+        <input type="text" id="FirstName" name="FirstName" class="person" placeholder="Enter ur First Name here" /> <br />
+
+        <label for="LastName"> Last Name </label>
+        <input type="text" id="LastName" name="LastName" class="person" placeholder="Enter ur Last Name here" /> <br />
+
+        <label for="EMail"> Email </label>
+        <input type="email" id="EMail" name="EMail" class="person" placeholder="yourname@email.com" /> <br />
+
+        <label for="pwd"> Password </label>
+        <input type="password" id="pwd" name="pwd" class="person" placeholder="password" onchange="checkpwd(this.value)" /> <br />
+        <progress id="prog_bar" value="0" max="6"> </progress> <span id="pwdstr"> </span><br />
+
+        <label for="cpwd"> Confirm Password </label>
+        <input type="password" id="cpwd" name="cpwd" class="person" placeholder="Must be same as pwd" /> <br />
+
+        <label for="dob"> D.O.B </label>
+        <input type="date" id="dob" name="dob" class="person" placeholder="mm/dd/yyyy" /> <br />
+
+        <label for="dobwt"> D.O.B with time </label>
+        <input type="datetime" id="dobwt" name="dobwt" class="person" placeholder="mm/dd/yyyy" /> <br />
+
+        <label for="dobwtl"> Local D.O.B </label>
+        <input type="datetime-local" id="dobwtl" name="dobwtl" class="person" placeholder="mm/dd/yyyy" /> <br />
+
+        <label for="ssn"> SSN </label>
+        <input type="text" id="ssn" name="ssn" class="person" maxlength="9" /> <br />
+
+        <label for="phone"> Phone </label>
+        <input type="text" id="phone" name="phone" class="person" maxlength="10" /> <br />
+
+        <label for="ccn"> Credit Card No </label>
+        <input type="text" id="ccn" name="ccn" class="person" maxlength="16" /> <br />
+
+        <input type="button" value="Local Store" name="store_button" onclick="saveToLocalStorage()" />
+        <input type="button" value="Session Store" name="store_button" onclick="saveToSessionStorage()" />
+
+        <input type="button" value="Login" name="submit" onclick="return validate();" />
+
+        <input type="button" value="Show Local Store" name="store_button" onclick="readFromLocalStorage()" />
+        <input type="button" value="Show Session Store" name="store_button" onclick="readFromSessionStorage()" /> <br />
+    </div>
+
+</form>
+
+</body>
+</html>
