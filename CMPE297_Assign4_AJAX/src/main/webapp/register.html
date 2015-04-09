@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> Registration Form </title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="style1.css"> -->
+    <style>
+        .align{
+            width: 30%;
+            text-align: right;
+        }
+        .myHead {
+            display: block;
+            background-color: #ddd;
+            padding: 25px;
+            font-size: 30px;
+            text-align:center
+        }
+        progress {
+            background-color: green;
+        }
+        #answer1Box,#answer2Box,#answer3Box,#answer4Box
+        {
+            float:left;
+            width: 120px;
+            height: 120px;
+            margin-right: 40px;
+            margin-bottom: 40px;
+        }
+        #target1
+        {
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            margin-top: 30px;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+<form  name="myForm" style ="width:75em;margin:0 auto;text-align:center">
+    <div class="myHead"><strong> Registration Form </strong></div> <br />
+    <div class="align">
+        <label for="FirstName"> First Name </label>
+        <input type="text" id="FirstName" name="FirstName" placeholder="Enter ur First Name here" /> <br />
+
+        <label for="LastName"> Last Name </label>
+        <input type="text" id="LastName" name="LastName" placeholder="Enter ur Last Name here" /> <br />
+
+        <label for="EMail"> Email </label>
+        <input type="email" id="EMail" name="EMail" placeholder="yourname@email.com" /> <br />
+
+        <label for="pwd"> Password </label>
+        <input type="password" id="pwd" name="pwd" placeholder="password" onchange="check(this.value)" /> <br />
+        <progress id="prog_bar" value="0" max="6"> </progress> <span id="pwdstr"> </span><br />
+
+        <label for="cpwd"> Confirm Password </label>
+        <input type="password" id="cpwd" name="cpwd" placeholder="Must be same as pwd" /> <br />
+
+        <label for="dob"> D.O.B </label>
+        <input type="date" id="dob" name="dob" placeholder="mm/dd/yyyy" /> <br />
+
+        <label for="dobwt"> D.O.B with time </label>
+        <input type="datetime" id="dobwt" name="dobwt" placeholder="mm/dd/yyyy" /> <br />
+
+        <label for="dobwtl"> Local D.O.B </label>
+        <input type="datetime-local" id="dobwtl" name="dobwtl" placeholder="mm/dd/yyyy" /> <br />
+
+        <label for="ssn"> SSN </label>
+        <input type="text" id="ssn" name="ssn" title="Enter ur 9 digit ssn here" pattern="[0-9]{9}" maxlength="9" /> <br />
+
+        <label for="phone"> Phone </label>
+        <input type="tel" id="phone" name="phone" title="Enter ur 10 digit phone number here" pattern="[0-9]{10}" maxlength="10" /> <br />
+
+        <label for="ccn"> Credit Card No </label>
+        <input type="text" id="ccn" name="ccn" title="Enter ur 12/16 digit credit card number here" pattern="[0-9]{12,16}" maxlength="16" /> <br />
+
+        <input type="button" value="Register" name="submit" onclick="return register();" disabled/> <br />
+        
+        <p style ="text-align:left"> What is the current season? </p>
+        <div id="target1" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+        <div id="answers">
+	        <div id="answer1Box" ondrop="drop1(event)" ondragover="allowDrop(event)">
+	            <img id="answer1" src="./images/fall.jpg"  width="120px" height="120px" draggable="true"
+	                 ondragstart="drag(event)">
+	        </div>
+	
+	        <div id="answer2Box" ondrop="drop1(event)" ondragover="allowDrop(event)">
+	            <img id="answer2" src="./images/spring.jpg"  width="120px" height="120px" draggable="true"
+	                 ondragstart="drag(event)">
+	        </div>
+	
+	        <div id="answer3Box" ondrop="drop1(event)" ondragover="allowDrop(event)">
+	            <img id="answer3" src="./images/winter.jpg"  width="120px" height="120px" draggable="true"
+	                 ondragstart="drag(event)">
+	        </div>
+	
+	        <div id="answer4Box" ondrop="drop1(event)" ondragover="allowDrop(event)">
+	            <img id="answer4" src="./images/summer.jpg"  width="120px" height="120px" draggable="true"
+	                 ondragstart="drag(event)">
+	        </div>
+        </div>
+	</div>
+</form>
+
+</body>
+</html>
